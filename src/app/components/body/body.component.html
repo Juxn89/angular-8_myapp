@@ -1,0 +1,29 @@
+<h1>Body Component</h1>
+<div class="row">
+    <div class="col">
+        <h1>*ngIf</h1>
+        <hr>
+        <div *ngIf="mostrar" class="card text-white bg-info mb-3" style="max-width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title">{{frase.autor}}</h5>
+                <p class="card-text">{{frase.mensaje}}</p>
+            </div>
+        </div>
+        <!--ESTA ES MI VERSIÓN-->
+        <button (click)="fnMostrar()" class="btn btn-outline-primary btn-block">Mostra/Ocultar</button>
+        <!--ESTA ES LA VERSIÓN DEL INSTRUCTOR-->
+        <button (click)="mostrar = !mostrar" class="btn btn-outline-primary btn-block">Mostra/Ocultar</button>
+    </div>
+    <div class="col">
+        <h1>*ngFor</h1>
+        <hr>
+        <ul class="list-group">
+            <li *ngFor="let p of personajes; let i = index" class="list-group-item">{{ i +1 }} ) {{p}}</li>
+            <!--<li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>-->
+        </ul>
+    </div>
+</div>
